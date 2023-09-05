@@ -15,7 +15,7 @@ test("uses the 'name' and 'city' props to display the correct text", () => {
 
 test("uses the 'color' prop to set the inline style color of the h1", () => {
   const { container } = render(
-    <Home name="Liza" city="New York" color="firebrick" />
+    <Home name="Liza" city="New York" color="firebrick" />,
   );
   const h1 = container.querySelector("h1");
   expect(h1).toBeInTheDocument();

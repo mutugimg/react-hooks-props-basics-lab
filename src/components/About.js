@@ -1,25 +1,19 @@
 import React from "react";
 import Links from "./Links";
-import { useState } from "react";
+
 function About(props) {
-  const bioProp = (props.bio)};
-  if(bioProp){
-    return({<p>{props.bio}</p>}
- 
-
-
+  // console.log(props.links.linkedin);
+  const { bio, links } = props;
+  // console.log(bio);
+  return (
     <div id="about">
       <h2>About Me</h2>
-      <p>{props.bio}</p>
-      <p>{true ? "Hello" : "Goodbye"}</h1>
+      {bio && <p>{bio}</p>}
+
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      <Links github="https://github.com/liza" linkedin="https://www.linkedin.com/in/liza/"/>
-     
+      <Links github={links.github} linkedin={links.linkedin} />
     </div>
   );
-}else{
-  return ""
 }
-
 
 export default About;

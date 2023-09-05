@@ -16,6 +16,6 @@ test("displays the URL of a Github link passed down as a prop", () => {
 test("displays the URL of a Linkedin link passed down as a prop", () => {
   render(<Links linkedin={"https://www.linkedin.com/in/liza/"} />);
   expect(
-    screen.queryByText("https://www.linkedin.com/in/liza/")
+    screen.queryByText("https://www.linkedin.com/in/liza/"),
   ).toBeInTheDocument();
 });
